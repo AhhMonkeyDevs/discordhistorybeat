@@ -3,12 +3,10 @@
 
 package config
 
-import "time"
-
 type Config struct {
-	Period time.Duration `config:"period"`
+	Token   string `config:"token"`
+	StartID string `config:"startID"`
+	GuildID string `config:"guildID"`
 }
 
-var DefaultConfig = Config{
-	Period: 1 * time.Second,
-}
+var DefaultConfig = Config{}

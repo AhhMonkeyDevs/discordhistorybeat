@@ -1,7 +1,6 @@
 package beater
 
 import (
-	"fmt"
 	"github.com/AhhMonkeyDevs/discordgo-lite"
 	"regexp"
 	"strings"
@@ -149,7 +148,6 @@ func parseMentions(content []string, format string) []string {
 	for _, text := range content {
 		matches := re.FindAllStringSubmatch(text, -1)
 		for _, element := range matches {
-			fmt.Println("Match")
 			mentions = append(mentions, element[1])
 		}
 	}
